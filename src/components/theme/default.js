@@ -30,9 +30,9 @@ const fonts = {
 }
 
 const colors = {
-  primary: [ '#0071D3' ],
+  primary: [ '#094B9B' ],
   secondary: [ '#F68080' ],
-  ascendant: [ '#E5F2FD' ],
+  ascendant: [ '#E3EBFF' ],
   textColor: [ '#4B4B5B' ],
   white: [ '#fff' ],
   grayscale: [

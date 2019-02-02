@@ -1,5 +1,10 @@
-import { configure } from '@storybook/react'
+import React from 'react'
+import { addDecorator, configure } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
+import { ThemeProvider } from 'styled-components'
+import backgroundColor from 'react-storybook-decorator-background'
+
+import theme, { GlobalStyle } from '../src/components/theme/default'
 
 // automatically import all files ending in *.stories.js
 const req = require.context('../src', true, /.stories.js$/)
@@ -21,5 +26,13 @@ global.__PATH_PREFIX__ = ''
 window.___navigate = pathname => {
   action('NavigateTo:')(pathname)
 }
+
+addDecorator(backgroundColor([ '#FDF8F3', '#E5F2FD' ]))
+addDecorator(story => (
+  <div>
+    <ThemeProvider theme={theme}>{story()}</ThemeProvider>
+    <GlobalStyle />
+  </div>
+))
 
 configure(loadStories, module)

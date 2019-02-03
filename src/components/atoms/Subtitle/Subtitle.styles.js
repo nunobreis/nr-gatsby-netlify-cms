@@ -3,7 +3,7 @@ import media from 'styled-media-query'
 
 import { tablet } from '../../mediaQueries/default'
 
-const color = ({ theme }) => theme.colors.primary[0]
+const color = ({ theme }) => theme.colors.secondary[0]
 
 const fontFamily = ({ theme }) => theme.fonts.primary || 'sans-serif'
 

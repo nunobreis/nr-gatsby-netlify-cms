@@ -5,7 +5,7 @@ import { ThemeProvider } from 'styled-components'
 
 import theme, { GlobalStyle } from './theme/default'
 
-import Navbar from '../components/Navbar'
+import Header from './organisms/Header/Header'
 
 const TemplateWrapper = ({ children }) => (
   <StaticQuery
@@ -69,7 +69,7 @@ const TemplateWrapper = ({ children }) => (
               <meta property="og:url" content="/" />
               <meta property="og:image" content="/img/og-image.jpg" />
             </Helmet>
-            <Navbar />
+            <Header />
             <div>{children}</div>
           </div>
         </ThemeProvider>

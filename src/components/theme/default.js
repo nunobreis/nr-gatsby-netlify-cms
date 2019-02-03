@@ -13,7 +13,7 @@ export const GlobalStyle = createGlobalStyle`
     -moz-font-feature-settings: "liga" on;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     line-height: 1.5;
     word-wrap: break-word;
@@ -25,7 +25,7 @@ export const GlobalStyle = createGlobalStyle`
 `
 
 const fonts = {
-  primary: 'Roboto, sans-serif',
+  primary: 'Montserrat, sans-serif',
   display: 'Noto Serif SC, serif',
 }
 

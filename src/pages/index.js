@@ -1,7 +1,19 @@
 import React from 'react'
+import styled from 'styled-components'
 import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
+
 import Layout from '../components/Layout'
+import Heading from '../components/atoms/Heading/Heading'
+import Paragraph from '../components/atoms/Paragraph/Paragraph'
+import Subtitle from '../components/atoms/Subtitle/Subtitle'
+import Image from '../components/atoms/Image/Image'
+import Nuno from '../img/Nuno.png'
+
+const Wrapper = styled.section`padding: 2rem 6rem;`
+const StyledImage = styled(Image)`
+  max-height: 12rem;
+`
 
 export default class IndexPage extends React.Component {
   render() {
@@ -10,14 +22,16 @@ export default class IndexPage extends React.Component {
 
     return (
       <Layout>
-        <section className="section">
-          <div className="container">
-            <div className="content">
-              <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
-            </div>
-            Some other content
-          </div>
-        </section>
+        <Wrapper>
+          <Heading level="1">Hey There,</Heading>
+          <StyledImage src={Nuno} alt="A picture of Nuno" />
+          <Subtitle>I am UX developer</Subtitle>
+          <Paragraph>
+            Leverage agile frameworks to provide a robust synopsis for high
+            level overviews. Iterative approaches to corporate strategy foster
+            collaborative thinking to further the overall.
+          </Paragraph>
+        </Wrapper>
       </Layout>
     )
   }

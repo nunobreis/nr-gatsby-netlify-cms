@@ -7,8 +7,11 @@ import { tablet } from '../../mediaQueries/default'
 
 const fontColor = ({ theme }) => theme.colors.textColor[0]
 
+const fontFamily = ({ theme }) => theme.fonts.primary
+
 const StyledParagraph = styled.p`
   font-size: 1.4rem;
+  font-family: ${fontFamily};
   line-height: 1.3;
   color: ${fontColor};
   margin: 1rem 0;

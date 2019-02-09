@@ -4,6 +4,10 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+
+  &:hover {
+    cursor: pointer;
+  }
 `
 
 const backgroundColor = ({ theme }) => theme.colors.primary[0]

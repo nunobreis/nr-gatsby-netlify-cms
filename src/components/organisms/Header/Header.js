@@ -1,28 +1,45 @@
 import React from 'react'
-import styled from 'styled-components'
 
+import Link from '../../atoms/Link/Link'
 import Navbar from '../../molecules/Navbar/Navbar'
+import Menu from '../../molecules/Menu/Menu'
 
-const fontFamily = ({ theme }) => theme.fonts.primary
-const color = ({ theme }) => theme.colors.primary[0]
+import { Logo, Wrapper } from './Header.styles'
 
-const Logo = styled.p`
-  font-family: ${fontFamily};
-  color: ${color};
-  font-size: 1.2rem;
-`
-const Wrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 2rem;
-`
+class Header extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      isMenuOpen: false,
+    }
 
-const Header = () => (
-  <Wrapper>
-    <Logo>nu-no</Logo>
-    <Navbar />
-  </Wrapper>
-)
+    this.handleOpenMenu = this.handleOpenMenu.bind(this)
+    this.handleCloseMenu = this.handleCloseMenu.bind(this)
+  }
+
+  handleOpenMenu() {
+    this.setState({ isMenuOpen: true })
+  }
+
+  handleCloseMenu() {
+    this.setState({ isMenuOpen: false })
+  }
+
+  render() {
+    return (
+      <div>
+        <Wrapper>
+          <Logo>nu-no</Logo>
+          <Link onClick={this.handleOpenMenu}>
+            <Navbar />
+          </Link>
+        </Wrapper>
+        {this.state.isMenuOpen ? (
+          <Menu handleCloseMenu={this.handleCloseMenu} />
+        ) : null}
+      </div>
+    )
+  }
+}
 
 export default Header

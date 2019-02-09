@@ -23,7 +23,7 @@ export default class IndexPage extends React.Component {
     return (
       <Layout>
         <Wrapper>
-          <Heading level="1">Hey There,</Heading>
+          <Heading level={1}>Hey There,</Heading>
           <StyledImage src={Nuno} alt="A picture of Nuno" />
           <Subtitle>I am UX developer</Subtitle>
           <Paragraph>

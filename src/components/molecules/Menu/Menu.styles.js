@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 import Link from '../../atoms/Link/Link'
+import { fadeIn } from '../../animations/animations'
 
 const color = ({ theme }) => theme.colors.white[0]
 
@@ -18,6 +19,8 @@ export const Wrapper = styled.div`
   top: 0;
   background-color: rgba(0, 0, 0, .8);
   padding: 2rem;
+  animation: ${fadeIn} .35s;
+  transition: opacity 0, 2s;
 `
 
 export const StyledLink = styled(Link)`

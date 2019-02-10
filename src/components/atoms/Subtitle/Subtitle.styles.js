@@ -11,12 +11,12 @@ const styles = css`
     color: ${color};
     text-transform: capitalize;
     font-family = ${fontFamily};
-    font-size: 1.4rem;
-    font-weight: 700;
+    font-size: 2rem;
+    font-weight: 300;
     margin: 0;
 
     ${media.greaterThan(tablet)`
-      font-size: 1.6rem;
+      font-size: 2.4rem;
     `}
 `
 

@@ -10,14 +10,15 @@ const fontColor = ({ theme }) => theme.colors.textColor[0]
 const fontFamily = ({ theme }) => theme.fonts.primary
 
 const StyledParagraph = styled.p`
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-family: ${fontFamily};
-  line-height: 1.3;
+  line-height: 1.6;
   color: ${fontColor};
   margin: 1rem 0;
 
   ${media.greaterThan(tablet)`
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+    line-height: 1.7;    
   `};
 `
 

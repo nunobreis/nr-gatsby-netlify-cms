@@ -1,18 +1,35 @@
 import React from 'react'
+import media from 'styled-media-query'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
+
+import { tablet } from '../components/mediaQueries/default'
 
 import Layout from '../components/Layout'
 import Heading from '../components/atoms/Heading/Heading'
 import Paragraph from '../components/atoms/Paragraph/Paragraph'
 import Subtitle from '../components/atoms/Subtitle/Subtitle'
-import Image from '../components/atoms/Image/Image'
-import Nuno from '../img/Nuno.png'
 
-const Wrapper = styled.section`padding: 2rem 6rem;`
-const StyledImage = styled(Image)`
-  max-height: 12rem;
+const Wrapper = styled.section`
+  padding: 0 4%;
+
+  ${media.greaterThan(tablet)`
+    padding: 0 6%;
+    font-size: 1.8rem;
+    line-height: 1.7;    
+  `};
+`
+
+const CoverImage = styled.div`
+  width: 100%;
+  min-height: 21rem;
+  background-color: #f9f9f9;
+  margin-bottom: 1rem;
+`
+
+const StyledHeading = styled(Heading)`
+  margin-bottom: -1rem;
 `
 
 export default class IndexPage extends React.Component {
@@ -23,8 +40,8 @@ export default class IndexPage extends React.Component {
     return (
       <Layout>
         <Wrapper>
-          <Heading level={1}>Hey There,</Heading>
-          <StyledImage src={Nuno} alt="A picture of Nuno" />
+          <StyledHeading level={1}>Hey There,</StyledHeading>
+          <CoverImage />
           <Subtitle>I am UX developer</Subtitle>
           <Paragraph>
             Leverage agile frameworks to provide a robust synopsis for high

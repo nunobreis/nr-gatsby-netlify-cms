@@ -40,5 +40,6 @@ export const CloseButton = styled(Link)`
   font-family: ${closeButtonFont};
   color: ${color};
   cursor: pointer;
-  margin-bottom: 2rem;
+  padding: 1rem;
+  text-align: center;
 `

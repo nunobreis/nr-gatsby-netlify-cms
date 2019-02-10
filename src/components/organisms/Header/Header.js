@@ -29,7 +29,9 @@ class Header extends React.Component {
     return (
       <div>
         <Wrapper>
-          <Logo>nu-no</Logo>
+          <Link to="/">
+            <Logo>nu-no</Logo>
+          </Link>
           <Link onClick={this.handleOpenMenu}>
             <Navbar />
           </Link>

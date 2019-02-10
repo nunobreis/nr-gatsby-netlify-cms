@@ -22,6 +22,10 @@ export const GlobalStyle = createGlobalStyle`
     color: #4B4B5B;
     background-color: #FFF8F2;
   }
+
+  a {
+    text-decoration: none;
+  }
 `
 
 const fonts = {

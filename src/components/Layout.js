@@ -6,6 +6,7 @@ import { ThemeProvider } from 'styled-components'
 import theme, { GlobalStyle } from './theme/default'
 
 import Header from './organisms/Header/Header'
+import VerticalNavbar from './molecules/VerticalNavbar/VerticalNavbar'
 
 const TemplateWrapper = ({ children }) => (
   <StaticQuery
@@ -70,6 +71,7 @@ const TemplateWrapper = ({ children }) => (
               <meta property="og:image" content="/img/og-image.jpg" />
             </Helmet>
             <Header />
+            <VerticalNavbar />
             <div>{children}</div>
           </div>
         </ThemeProvider>

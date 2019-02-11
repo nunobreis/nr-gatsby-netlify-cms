@@ -1,8 +1,8 @@
 import React from 'react'
 
-import { Wrapper, StyledLink } from './VerticalNavbar.styles'
+import { Wrapper, StyledLink } from './SocialMedia.styles'
 
-const VerticalNavbar = () => (
+const SocialMedia = () => (
   <Wrapper>
     <StyledLink href="https://www.instagram.com/nunobreis/">
       Instagram
@@ -17,4 +17,4 @@ const VerticalNavbar = () => (
   </Wrapper>
 )
 
-export default VerticalNavbar
+export default SocialMedia

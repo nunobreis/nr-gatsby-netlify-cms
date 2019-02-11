@@ -12,7 +12,7 @@ const closeButtonFont = ({ theme }) => theme.fonts.primary
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  justify-items: space-around;
+  justify-content: center;
   height: 100vh;
   width: 100%;
   position: absolute;
@@ -40,6 +40,13 @@ export const CloseButton = styled(Link)`
   font-family: ${closeButtonFont};
   color: ${color};
   cursor: pointer;
-  padding: 1rem;
+  margin: 1rem auto;
   text-align: center;
+  padding: 1rem 2rem;
+
+  &:hover {
+    background-color: #000;
+    transform: scale(.95);
+    color: ${color};
+  }
 `

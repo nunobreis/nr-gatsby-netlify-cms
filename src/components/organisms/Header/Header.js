@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Link from '../../atoms/Link/Link'
-import Navbar from '../../molecules/Navbar/Navbar'
+import Navigation from '../../molecules/Navigation/Navigation'
 import Menu from '../../molecules/Menu/Menu'
 
 import { Logo, Wrapper } from './Header.styles'
@@ -29,11 +29,11 @@ class Header extends React.Component {
     return (
       <div>
         <Wrapper>
+          <Link onClick={this.handleOpenMenu}>
+            <Navigation />
+          </Link>
           <Link to="/">
             <Logo>nu-no</Logo>
-          </Link>
-          <Link onClick={this.handleOpenMenu}>
-            <Navbar />
           </Link>
         </Wrapper>
         {this.state.isMenuOpen ? (

@@ -39,6 +39,7 @@ const colors = {
   ascendant: [ '#E3EBFF' ],
   textColor: [ '#4B4B5B' ],
   white: [ '#fff' ],
+  bodyColor: [ '#FFF8F2' ],
   grayscale: [
     '#171717',
     '#2e2e2e',

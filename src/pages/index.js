@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
-import { tablet } from '../components/mediaQueries/default'
+import { mobile } from '../components/mediaQueries/default'
 
 import Layout from '../components/Layout'
 import Heading from '../components/atoms/Heading/Heading'
@@ -14,22 +14,14 @@ import Subtitle from '../components/atoms/Subtitle/Subtitle'
 const Wrapper = styled.section`
   padding: 0 4%;
 
-  ${media.greaterThan(tablet)`
-    padding: 0 6%;
+  ${media.greaterThan(mobile)`
+    padding: 0 6% 0 12%;
     font-size: 1.8rem;
     line-height: 1.7;    
   `};
 `
 
-const CoverImage = styled.div`
-  width: 100%;
-  min-height: 21rem;
-  background-color: #f9f9f9;
-  margin-bottom: 1rem;
-`
-
 const StyledHeading = styled(Heading)`
-  margin-bottom: -1rem;
 `
 
 export default class IndexPage extends React.Component {
@@ -41,7 +33,6 @@ export default class IndexPage extends React.Component {
       <Layout>
         <Wrapper>
           <StyledHeading level={1}>Hey There,</StyledHeading>
-          <CoverImage />
           <Subtitle>I am UX developer</Subtitle>
           <Paragraph>
             Leverage agile frameworks to provide a robust synopsis for high

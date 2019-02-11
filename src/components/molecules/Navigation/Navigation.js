@@ -2,6 +2,6 @@ import React from 'react'
 
 import BurguerMenu from '../../atoms/BurguerMenu/BurguerMenu'
 
-const Navbar = () => <BurguerMenu />
+const Navigation = () => <BurguerMenu />
 
-export default Navbar
+export default Navigation

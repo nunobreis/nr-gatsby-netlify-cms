@@ -16,6 +16,7 @@ export const Wrapper = styled.div`
   height: 100vh;
   width: 100%;
   position: absolute;
+  z-index: 2000;
   top: 0;
   background-color: rgba(0, 0, 0, .8);
   padding: 2rem;

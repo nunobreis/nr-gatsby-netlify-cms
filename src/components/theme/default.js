@@ -21,6 +21,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     color: #4B4B5B;
     background-color: #FFF8F2;
+    height: 100%;
   }
 
   a {

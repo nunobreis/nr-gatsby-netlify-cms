@@ -3,8 +3,8 @@ import styled from 'styled-components'
 import media from 'styled-media-query'
 
 import MainLayout from '../MainLayout/MainLayout'
-import { tablet } from '../mediaQueries/default'
-import BackgroundSection from '../molecules/BackgroundSection/BackgroundSection'
+import { tablet } from '../../mediaQueries/default'
+import BackgroundSection from '../../molecules/BackgroundSection/BackgroundSection'
 
 const Wrapper = styled.div`
   ${media.greaterThan(tablet)`

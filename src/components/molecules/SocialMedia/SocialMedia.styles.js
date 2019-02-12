@@ -1,11 +1,13 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
 
-import { tablet } from '../../mediaQueries/default'
+import { mobile, tablet } from '../../mediaQueries/default'
 
 import Link from '../../atoms/Link/Link'
 
-const color = ({ theme }) => theme.colors.primary[0]
+const color = ({ theme }) => theme.colors.secondary[0]
+
+const borderColor = ({ theme }) => theme.colors.primary[0]
 
 const backgroundColor = ({ theme }) => theme.colors.bodyColor[0]
 
@@ -30,7 +32,15 @@ export const Wrapper = styled.div`
 `
 
 export const StyledLink = styled(Link)`
-  padding: 1rem;
+  padding: .5rem;
   color: ${color};
   margin: auto;
+
+  &:hover {
+    background-color: ${borderColor};
+  }
+
+  ${media.greaterThan(mobile)`
+    padding: 1rem;
+  `}
 `

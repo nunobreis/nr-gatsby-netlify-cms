@@ -20,7 +20,7 @@ export const GlobalStyle = createGlobalStyle`
     display: block;
     margin: 0;
     color: #4B4B5B;
-    background-color: #FFF8F2;
+    background-color: #f9f9f9;
     height: 100%;
   }
 
@@ -35,12 +35,12 @@ const fonts = {
 }
 
 const colors = {
-  primary: [ '#094B9B' ],
-  secondary: [ '#F68080' ],
-  ascendant: [ '#E3EBFF' ],
-  textColor: [ '#4B4B5B' ],
+  primary: [ '#64e7d5' ],
+  secondary: [ '#17213e' ],
+  ascendant: [ '#DF4A34' ],
+  textColor: [ '#17213e' ],
   white: [ '#fff' ],
-  bodyColor: [ '#FFF8F2' ],
+  bodyColor: [ '#f9f9f9' ],
   grayscale: [
     '#171717',
     '#2e2e2e',

@@ -1,20 +1,18 @@
 import styled from 'styled-components'
+import media from 'styled-media-query'
 
-const fontFamily = ({ theme }) => theme.fonts.primary
+import { mobile } from '../../mediaQueries/default'
 
-const color = ({ theme }) => theme.colors.white[0]
-
-export const Logo = styled.p`
-  font-family: ${fontFamily};
-  color: ${color};
-  font-size: 1.2rem;
-`
 export const Wrapper = styled.div`
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 0 1rem;
+  z-index: 1000;
+  padding: 1rem;
+
+  ${media.greaterThan(mobile)`
+    position: absolute;
+  `};
 `

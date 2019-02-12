@@ -3,15 +3,16 @@ import media from 'styled-media-query'
 
 import { tablet } from '../../mediaQueries/default'
 
-const color = ({ theme }) => theme.colors.secondary[0]
+const color = ({ theme }) => theme.colors.ascendant[0]
 
 const fontFamily = ({ theme }) => theme.fonts.primary || 'sans-serif'
 
 const styles = css`
     color: ${color};
-    text-transform: capitalize;
+    text-transform: uppercase;
     font-family = ${fontFamily};
-    font-size: 2rem;
+    font-size: 1.6rem;
+    line-height: 1.8;
     font-weight: 300;
     margin: 0;
 

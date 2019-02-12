@@ -22,6 +22,7 @@ const Wrapper = styled.section`
 `
 
 const StyledHeading = styled(Heading)`
+  margin-bottom: 0;
 `
 
 export default class IndexPage extends React.Component {

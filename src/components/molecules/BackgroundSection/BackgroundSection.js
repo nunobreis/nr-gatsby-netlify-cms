@@ -18,12 +18,17 @@ const StyledDiv = styled.div`
 
 const StyledBackgroundImage = styled(BackgroundImage)`
   width: 100%;
+  max-height: 15rem;
 
   &::after {
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed; 
   }
+
+  ${media.greaterThan(tablet)`
+    max-height: 100%;
+  `}
 `
 
 const BackgroundSection = () => (

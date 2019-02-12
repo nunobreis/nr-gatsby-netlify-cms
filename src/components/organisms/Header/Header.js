@@ -3,8 +3,9 @@ import React from 'react'
 import Link from '../../atoms/Link/Link'
 import Navigation from '../../molecules/Navigation/Navigation'
 import Menu from '../../molecules/Menu/Menu'
+import Logo from '../../atoms/Logo/Logo'
 
-import { Logo, Wrapper } from './Header.styles'
+import { Wrapper } from './Header.styles'
 
 class Header extends React.Component {
   constructor(props) {
@@ -33,7 +34,7 @@ class Header extends React.Component {
             <Navigation />
           </Link>
           <Link to="/">
-            <Logo>nu-no</Logo>
+            <Logo />
           </Link>
         </Wrapper>
         {this.state.isMenuOpen ? (

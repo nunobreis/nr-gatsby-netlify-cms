@@ -30,7 +30,7 @@ const Content = styled.div`
   `};
 `
 
-const TemplateWrapper = ({ children, image }) => (
+const TemplateWrapper = ({ children }) => (
   <StaticQuery
     query={graphql`
       query HeadingQuery {

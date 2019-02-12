@@ -6,7 +6,7 @@ import { graphql } from 'gatsby'
 
 import { mobile } from '../components/mediaQueries/default'
 
-import Layout from '../components/Layout'
+import HomeLayout from '../components/Layouts/HomeLayout/HomeLayout'
 import Heading from '../components/atoms/Heading/Heading'
 import Paragraph from '../components/atoms/Paragraph/Paragraph'
 import Subtitle from '../components/atoms/Subtitle/Subtitle'
@@ -31,7 +31,7 @@ export default class IndexPage extends React.Component {
     // const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <Layout>
+      <HomeLayout>
         <Wrapper>
           <StyledHeading level={1}>Hey There,</StyledHeading>
           <Subtitle>I am UX developer</Subtitle>
@@ -41,7 +41,7 @@ export default class IndexPage extends React.Component {
             collaborative thinking to further the overall.
           </Paragraph>
         </Wrapper>
-      </Layout>
+      </HomeLayout>
     )
   }
 }

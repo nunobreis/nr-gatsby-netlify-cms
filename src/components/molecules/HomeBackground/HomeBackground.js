@@ -31,7 +31,7 @@ const StyledBackgroundImage = styled(BackgroundImage)`
   `}
 `
 
-const BackgroundSection = () => (
+const HomeBackground = () => (
   <StaticQuery
     query={graphql`
       query {
@@ -60,4 +60,4 @@ const BackgroundSection = () => (
   />
 )
 
-export default BackgroundSection
+export default HomeBackground

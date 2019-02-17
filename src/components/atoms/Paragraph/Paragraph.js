@@ -22,8 +22,8 @@ const StyledParagraph = styled.p`
   `};
 `
 
-const Paragraph = ({ children }) => (
-  <StyledParagraph>{children}</StyledParagraph>
+const Paragraph = ({ children, ...props }) => (
+  <StyledParagraph {...props}>{children}</StyledParagraph>
 )
 
 Paragraph.propTypes = {

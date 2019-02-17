@@ -1,19 +1,20 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link as GatsbyLink } from 'gatsby'
+
+import { StyledGatsbyLink, StyledATag } from './Link.styles'
 
 const Link = ({ children, to, href, ...props }) => {
   if (to) {
     return (
-      <GatsbyLink to={to} {...props}>
+      <StyledGatsbyLink to={to} {...props}>
         {children}
-      </GatsbyLink>
+      </StyledGatsbyLink>
     )
   } else {
     return (
-      <a href={href} {...props}>
+      <StyledATag href={href} {...props}>
         {children}
-      </a>
+      </StyledATag>
     )
   }
 }

@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'NU-NO',
-    description: "Nuno's UX blog and personal website",
+    description: "Design thinking in the digital age",
   },
   plugins: [
     'gatsby-plugin-react-helmet',

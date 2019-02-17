@@ -4,7 +4,7 @@ import media from 'styled-media-query'
 
 import MainLayout from '../MainLayout/MainLayout'
 import { tablet } from '../../mediaQueries/default'
-import BackgroundSection from '../../molecules/BackgroundSection/BackgroundSection'
+import HomeBackground from '../../molecules/HomeBackground/HomeBackground'
 
 const Wrapper = styled.div`
   ${media.greaterThan(tablet)`
@@ -26,7 +26,7 @@ const Content = styled.div`
 const HomeLayout = ({ children }) => (
   <MainLayout>
     <Wrapper>
-      <BackgroundSection />
+      <HomeBackground />
       <Content>{children}</Content>
     </Wrapper>
   </MainLayout>

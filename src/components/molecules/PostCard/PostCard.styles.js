@@ -42,6 +42,7 @@ export const Date = styled(TextLabel)`
 
 export const Author = styled(TextLabel)`
   display: block;
+  color: ${keepReadingColor};
 `
 export const PostTitle = styled(Link)`
   color: ${backgroundColor};

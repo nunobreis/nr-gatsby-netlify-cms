@@ -7,6 +7,7 @@ import theme, { GlobalStyle } from '../../theme/default'
 import Header from '../../organisms/Header/Header'
 import SocialMedia from '../../molecules/SocialMedia/SocialMedia'
 import Metadata from '../../atoms/Metadata/Metadata'
+import MobileNavitagion from '../../molecules/MobileNavitagion/MobileNavitagion'
 
 const PostListLayout = ({ children }) => (
   <StaticQuery
@@ -28,6 +29,7 @@ const PostListLayout = ({ children }) => (
             <Metadata data={data} />
             <Header />
             <SocialMedia />
+            <MobileNavitagion />
             {children}
           </div>
         </ThemeProvider>

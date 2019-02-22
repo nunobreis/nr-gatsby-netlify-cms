@@ -72,7 +72,7 @@ const colors = {
   ascendant: [ '#ae3e2e' ],
   textColor: [ '#17213e' ],
   white: [ '#fff' ],
-  bodyColor: [ '#f9f9f9' ],
+  bodyColor: [ '#fcecd7' ],
   grayscale: [
     '#171717',
     '#2e2e2e',

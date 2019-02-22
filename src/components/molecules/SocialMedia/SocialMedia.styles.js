@@ -9,18 +9,13 @@ const color = ({ theme }) => theme.colors.secondary[0]
 
 const borderColor = ({ theme }) => theme.colors.primary[0]
 
-const backgroundColor = ({ theme }) => theme.colors.bodyColor[0]
-
 export const Wrapper = styled.div`
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  background-color: ${backgroundColor};
-  box-shadow: 0 -1px 10px rgba(0, 0, 0, .1);
-  padding: 1rem 0;
+  visibility: hidden;
 
   ${media.greaterThan(tablet)`
+    visibility: visible;
+    position: fixed;
+    bottom: 0;
     writing-mode: vertical-rl;
     transform: rotate(-180deg);
     background-color: transparent;

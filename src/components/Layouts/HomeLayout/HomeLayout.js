@@ -4,7 +4,6 @@ import media from 'styled-media-query'
 
 import MainLayout from '../MainLayout/MainLayout'
 import { tablet } from '../../mediaQueries/default'
-import HomeBackground from '../../molecules/HomeBackground/HomeBackground'
 
 const Wrapper = styled.div`
   ${media.greaterThan(tablet)`
@@ -23,10 +22,24 @@ const Content = styled.div`
   `};
 `
 
+const BackgroundImage = styled.div`
+  padding: 15rem;
+
+  ${media.greaterThan(tablet)`
+    min-width: 50%;
+    height: 100vh;
+  `};
+`
+
+const BackgroundStyles = {
+  background: `url(/img/landingPicture.jpg) center center no-repeat`,
+  backgroundSize: 'cover',
+}
+
 const HomeLayout = ({ children }) => (
   <MainLayout>
     <Wrapper>
-      <HomeBackground />
+      <BackgroundImage style={BackgroundStyles} />
       <Content>{children}</Content>
     </Wrapper>
   </MainLayout>

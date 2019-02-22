@@ -27,7 +27,7 @@ const Metadata = ({ data }) => (
 
     <link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#ff4400" />
     <link
-      href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Noto+Serif+SC"
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700|family=Anton"
       rel="stylesheet"
     />
     <meta name="theme-color" content="#fff" />

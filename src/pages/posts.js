@@ -15,17 +15,14 @@ export default class Posts extends React.Component {
       <section>
         <PostsListLayout>
           {posts.map(({ node: post }) => (
-            <div>
-              {console.log('=====>', post.frontmatter)}
-              <PostCard
-                key={post.id}
-                to={post.fields.slug}
-                date={post.frontmatter.date}
-                title={post.frontmatter.title}
-                author={post.frontmatter.author}
-                sinopse={post.excerpt}
-              />
-            </div>
+            <PostCard
+              key={post.id}
+              to={post.fields.slug}
+              date={post.frontmatter.date}
+              title={post.frontmatter.title}
+              author={post.frontmatter.author}
+              sinopse={post.excerpt}
+            />
           ))}
         </PostsListLayout>
       </section>

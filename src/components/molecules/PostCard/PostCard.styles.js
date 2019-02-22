@@ -6,15 +6,19 @@ import { mobile } from '../../mediaQueries/default'
 import TextLabel from '../../atoms/TextLabel/TextLabel'
 import Image from '../../atoms/Image/Image'
 import Paragraph from '../../atoms/Paragraph/Paragraph'
-import Subtitle from '../../atoms/Subtitle/Subtitle'
+import Link from '../../atoms/Link/Link'
 
-const whiteColor = ({ theme }) => theme.colors.white[0]
+const color = ({ theme }) => theme.colors.ascendant[0]
+
+const keepReadingColor = ({ theme }) => theme.colors.primary[0]
+
+const backgroundColor = ({ theme }) => theme.colors.secondary[0]
+
+const titleFont = ({ theme }) => theme.fonts.display
 
 export const Wrapper = styled.div`
   display: flex;
-  background-color: ${whiteColor};
   margin: 2rem;
-  box-shadow: .2rem .2rem 1rem rgba(0, 0, 0, .1);
 
   ${media.greaterThan(mobile)`
     display: inline-block;
@@ -31,14 +35,28 @@ export const TextContent = styled.div`
   padding: 1rem 1rem 0 1rem;
 `
 
-export const Author = styled(TextLabel)`
-  float: right;
+export const Date = styled(TextLabel)`
+  display: block;
+  color: ${color};
 `
-export const PostTitle = styled(Subtitle)`
-  font-size: 1.2rem;
-  text-transform: capitalize;
+
+export const Author = styled(TextLabel)`
+  display: block;
+`
+export const PostTitle = styled(Link)`
+  color: ${backgroundColor};
+  font-family: ${titleFont};
+  font-size: 2.4rem;
+  line-height: 1.4;
+  margin: 1.6rem 0;
 `
 
 export const Sinopse = styled(Paragraph)`
   font-size: 1rem;
+  margin: .5rem 0;
+`
+
+export const KeepReading = styled(Link)`
+  color: ${keepReadingColor};
+  background-color: ${backgroundColor};
 `

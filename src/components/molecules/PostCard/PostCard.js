@@ -1,8 +1,6 @@
 import React from 'react'
 
-import TextLabel from '../../atoms/TextLabel/TextLabel'
 import landingPicture from '../../../img/landingPicture.jpg'
-import Link from '../../atoms/Link/Link'
 
 import {
   Wrapper,
@@ -11,6 +9,8 @@ import {
   Author,
   PostTitle,
   Sinopse,
+  Date,
+  KeepReading,
 } from './PostCard.styles'
 
 const PostCard = ({ to, image, date, author, title, sinopse }) => (
@@ -18,11 +18,11 @@ const PostCard = ({ to, image, date, author, title, sinopse }) => (
     {image ? <StyledImage src={landingPicture} alt="a test picture" /> : null}
 
     <TextContent>
-      <TextLabel>{date}</TextLabel>
+      <PostTitle to={to}>{title}</PostTitle>
+      <Date>{date}</Date>
       <Author>{author}</Author>
-      <PostTitle>{title}</PostTitle>
       <Sinopse>{sinopse}</Sinopse>
-      <Link to={to}>Keep Reading →</Link>
+      <KeepReading to={to}>Keep Reading →</KeepReading>
     </TextContent>
   </Wrapper>
 )

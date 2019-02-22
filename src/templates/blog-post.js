@@ -5,9 +5,14 @@ import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Content, { HTMLContent } from '../components/Content'
 
+import PostViewLayout from '../components/Layouts/PostViewLayout/PostViewLayout'
+import Heading from '../components/atoms/Heading/Heading'
+import Subtitle from '../components/atoms/Subtitle/Subtitle'
+
 export const BlogPostTemplate = ({
   content,
   contentComponent,
+  coverPhoto,
   description,
   tags,
   title,
@@ -16,32 +21,24 @@ export const BlogPostTemplate = ({
   const PostContent = contentComponent || Content
 
   return (
-    <section className="section">
+    <PostViewLayout coverPhoto={coverPhoto ? coverPhoto : null}>
       {helmet || ''}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
-            <p>{description}</p>
-            <PostContent content={content} />
-            {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
-                <ul className="taglist">
-                  {tags.map(tag => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : null}
-          </div>
+      <Heading level={1}>{title}</Heading>
+      <Subtitle>{description}</Subtitle>
+      <PostContent content={content} />
+      {tags && tags.length ? (
+        <div style={{ marginTop: `4rem` }}>
+          <h4>Tags</h4>
+          <ul className="taglist">
+            {tags.map(tag => (
+              <li key={tag + `tag`}>
+                <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+              </li>
+            ))}
+          </ul>
         </div>
-      </div>
-    </section>
+      ) : null}
+    </PostViewLayout>
   )
 }
 
@@ -61,6 +58,9 @@ const BlogPost = ({ data }) => {
       content={post.html}
       contentComponent={HTMLContent}
       description={post.frontmatter.description}
+      coverPhoto={
+        post.frontmatter.coverPhoto ? post.frontmatter.coverPhoto : null
+      }
       helmet={
         <Helmet titleTemplate="%s | Blog">
           <title>{`${post.frontmatter.title}`}</title>
@@ -68,6 +68,7 @@ const BlogPost = ({ data }) => {
             name="description"
             content={`${post.frontmatter.description}`}
           />
+          {console.log(post.frontmatter)}
         </Helmet>
       }
       tags={post.frontmatter.tags}
@@ -93,6 +94,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         description
+        coverPhoto
         tags
       }
     }

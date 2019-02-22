@@ -27,13 +27,10 @@ const StyledHeading = styled(Heading)`
 
 export default class IndexPage extends React.Component {
   render() {
-    // const { data } = this.props
-    // const { edges: posts } = data.allMarkdownRemark
-
     return (
       <HomeLayout>
         <Wrapper>
-          <StyledHeading level={1}>Hey There,</StyledHeading>
+          <StyledHeading level={1}>Hello World</StyledHeading>
           <Subtitle>I am UX developer</Subtitle>
           <Paragraph>
             Leverage agile frameworks to provide a robust synopsis for high

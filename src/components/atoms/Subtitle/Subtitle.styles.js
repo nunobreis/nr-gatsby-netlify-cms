@@ -9,15 +9,14 @@ const fontFamily = ({ theme }) => theme.fonts.primary || 'sans-serif'
 
 const styles = css`
     color: ${color};
-    text-transform: uppercase;
     font-family = ${fontFamily};
     font-size: 1.6rem;
-    line-height: 1.8;
+    line-height: 1.4;
     font-weight: 300;
-    margin: 0;
+    margin: 2rem 0;
 
     ${media.greaterThan(tablet)`
-      font-size: 2.4rem;
+      font-size: 2rem;
     `}
 `
 

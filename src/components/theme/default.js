@@ -20,8 +20,40 @@ export const GlobalStyle = createGlobalStyle`
     display: block;
     margin: 0;
     color: #4B4B5B;
-    background-color: #f9f9f9;
+    background-color: #fcecd7;
     height: 100%;
+    h1, h2, h3, h4 {
+      font-family: 'Anton, sans-serif';
+    }
+    h2 { 
+      font-size: 2rem;
+    }
+
+    h4 {
+      font-size: 1.4rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+    }
+
+    li {
+      font-size: 1rem;
+      line-height: 2;
+    }
+
+    li > a {
+      font-size: 1.2rem;
+      color: #ae3e2e;
+      text-decoration: underline;
+    }
+
+    blockquote {
+      font-family: 'Anton, sans-serif';
+      text-align: left;
+      font-weight: 700;
+    }
   }
 
   a {
@@ -31,13 +63,13 @@ export const GlobalStyle = createGlobalStyle`
 
 const fonts = {
   primary: 'Montserrat, sans-serif',
-  display: 'Noto Serif SC, serif',
+  display: 'Anton, sans-serif',
 }
 
 const colors = {
   primary: [ '#64e7d5' ],
   secondary: [ '#17213e' ],
-  ascendant: [ '#DF4A34' ],
+  ascendant: [ '#ae3e2e' ],
   textColor: [ '#17213e' ],
   white: [ '#fff' ],
   bodyColor: [ '#f9f9f9' ],

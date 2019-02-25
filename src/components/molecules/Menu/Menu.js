@@ -14,7 +14,7 @@ const Menu = ({ handleCloseMenu }) => (
     <StyledLink to="/about" onClick={handleCloseMenu}>
       About
     </StyledLink>
-    <StyledLink to="/contacts" onClick={handleCloseMenu}>
+    <StyledLink to="/contact" onClick={handleCloseMenu}>
       Contacts
     </StyledLink>
   </Wrapper>

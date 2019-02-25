@@ -22,6 +22,7 @@ const Wrapper = styled.section`
 `
 
 const StyledHeading = styled(Heading)`
+  margin-top: 1.5rem;
   margin-bottom: 0;
 `
 

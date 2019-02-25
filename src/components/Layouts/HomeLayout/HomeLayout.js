@@ -8,7 +8,7 @@ import { tablet } from '../../mediaQueries/default'
 const Wrapper = styled.div`
   ${media.greaterThan(tablet)`
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     flex-direction: row-reverse;
   `};
@@ -23,10 +23,9 @@ const Content = styled.div`
 `
 
 const BackgroundImage = styled.div`
-  padding: 15rem;
+  padding: 25%;
 
   ${media.greaterThan(tablet)`
-    min-width: 50%;
     height: 100vh;
   `};
 `

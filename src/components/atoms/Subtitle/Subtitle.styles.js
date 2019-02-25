@@ -13,7 +13,7 @@ const styles = css`
     font-size: 1.6rem;
     line-height: 1.4;
     font-weight: 300;
-    margin: 2rem 0;
+    margin: .5rem 0;
 
     ${media.greaterThan(tablet)`
       font-size: 2rem;

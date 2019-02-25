@@ -18,7 +18,7 @@ const titleFont = ({ theme }) => theme.fonts.display
 
 export const Wrapper = styled.div`
   display: flex;
-  margin: 2rem;
+  margin: 1rem 0;
 
   ${media.greaterThan(mobile)`
     display: inline-block;

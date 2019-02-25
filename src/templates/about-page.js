@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
 import PostListLayout from '../components/Layouts/PostListLayout/PostListLayout'
 import AboutSection from '../components/organisms/AboutSection/AboutSection'
@@ -14,10 +13,6 @@ const AboutPage = () => {
       <AboutPageTemplate />
     </PostListLayout>
   )
-}
-
-AboutPage.propTypes = {
-  data: PropTypes.object.isRequired,
 }
 
 export default AboutPage

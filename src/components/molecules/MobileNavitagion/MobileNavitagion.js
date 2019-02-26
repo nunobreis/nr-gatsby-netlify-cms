@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import media from 'styled-media-query'
 import Link from '../../atoms/Link/Link'
 
-import { mobile } from '../../mediaQueries/default'
+import { tablet } from '../../mediaQueries/default'
 
 import HomeIcon from './HomeIcon'
 import PostsIcon from './PostsIcon'
@@ -16,6 +16,7 @@ const linkColor = ({ theme }) => theme.colors.secondary[0]
 
 const Wrapper = styled.div`
   display: flex;
+  z-index: 2000;
   justify-content: space-around;
   position: fixed;
   bottom: 0;
@@ -25,7 +26,7 @@ const Wrapper = styled.div`
   box-shadow: 0 -1px 10px rgba(0, 0, 0, .1);
   padding: .5rem 0 0 0;
 
-  ${media.greaterThan(mobile)`
+  ${media.greaterThan(tablet)`
     visibility: hidden;
   `};
 `

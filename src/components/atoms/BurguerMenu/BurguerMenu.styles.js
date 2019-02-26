@@ -1,12 +1,12 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
 
-import { mobile } from '../../mediaQueries/default'
+import { tablet } from '../../mediaQueries/default'
 
 export const Wrapper = styled.div`
   visibility: hidden;
 
-  ${media.greaterThan(mobile)`
+  ${media.greaterThan(tablet)`
   visibility: visible;
   &:hover {
     cursor: pointer;

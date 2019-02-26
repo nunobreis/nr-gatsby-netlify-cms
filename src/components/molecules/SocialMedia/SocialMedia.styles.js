@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
 
-import { mobile } from '../../mediaQueries/default'
+import { mobile, tablet } from '../../mediaQueries/default'
 
 import Link from '../../atoms/Link/Link'
 
@@ -14,7 +14,7 @@ const borderColor = ({ theme }) => theme.colors.primary[0]
 export const Wrapper = styled.div`
   display: none;
 
-  ${media.greaterThan(mobile)`
+  ${media.greaterThan(tablet)`
     display: block;
     position: fixed;
     bottom: 0;

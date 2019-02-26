@@ -23,7 +23,8 @@ export const GlobalStyle = createGlobalStyle`
     background-color: #fcecd7;
     height: 100%;
     h1, h2, h3, h4 {
-      font-family: 'Anton, sans-serif';
+      font-family: Anton, sans-serif;
+      font-weight: 400;
     }
     h2 { 
       font-size: 2rem;
@@ -67,7 +68,7 @@ const fonts = {
 }
 
 const colors = {
-  primary: [ '#64e7d5' ],
+  primary: [ '#32b3a6' ],
   secondary: [ '#17213e' ],
   ascendant: [ '#ae3e2e' ],
   textColor: [ '#17213e' ],

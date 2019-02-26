@@ -1,5 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
+import media from 'styled-media-query'
+
+import { tablet } from '../../mediaQueries/default'
 
 import Heading from '../../atoms/Heading/Heading'
 import Subtitle from '../../atoms/Subtitle/Subtitle'
@@ -7,10 +10,17 @@ import Paragraph from '../../atoms/Paragraph/Paragraph'
 
 const Wrapper = styled.section`padding: 4% 12%;`
 
+const quoteColor = ({ theme }) => theme.colors.primary[0]
+
 const Quote = styled(Subtitle)`
   font-style: italic;
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   line-height: 1.4;
+  color: ${quoteColor};
+
+  ${media.greaterThan(tablet)`
+    font-size: 1.6rem;
+  `}
 `
 
 const Card = styled.div`margin: 4rem 0;`
@@ -20,9 +30,8 @@ const AdditionalInfo = styled.div``
 const AboutSection = () => (
   <Wrapper>
     <Quote>
-      Leverage agile frameworks to provide a robust synopsis for high level
-      overviews. Iterative approaches to corporate strategy foster collaborative
-      thinking to further the overall value proposition.
+      "We believe the next generation of innovators and leaders need to be great
+      design thinkers." - David Kelley, Founder of IDEO
     </Quote>
     <Card>
       <AdditionalInfo>

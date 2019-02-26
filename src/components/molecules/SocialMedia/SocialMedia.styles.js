@@ -7,6 +7,8 @@ import Link from '../../atoms/Link/Link'
 
 const color = ({ theme }) => theme.colors.secondary[0]
 
+const whiteColor = ({ theme }) => theme.colors.white[0]
+
 const borderColor = ({ theme }) => theme.colors.primary[0]
 
 export const Wrapper = styled.div`
@@ -33,6 +35,7 @@ export const StyledLink = styled(Link)`
 
   &:hover {
     background-color: ${borderColor};
+    color: ${whiteColor};
   }
 
   ${media.greaterThan(mobile)`

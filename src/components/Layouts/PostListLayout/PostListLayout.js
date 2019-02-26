@@ -34,11 +34,11 @@ const CoverPhoto = styled.div`
   `};
 
   ${media.greaterThan(tablet)`
-    height: 25rem;
+    height: 20rem;
   `};
 
   ${media.greaterThan(desktop)`
-    height: 30rem;
+    height: 22rem;
   `};
 `
 

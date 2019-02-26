@@ -3,7 +3,7 @@ import media from 'styled-media-query'
 
 import { tablet } from '../../mediaQueries/default'
 
-const fontFamily = ({ theme }) => theme.fonts.display || 'serif'
+const fontFamily = ({ theme }) => theme.fonts.display || 'sans-serif'
 
 const fontSizeLarge = ({ level }) => `${3 + 1 * (1 / level)}rem`
 

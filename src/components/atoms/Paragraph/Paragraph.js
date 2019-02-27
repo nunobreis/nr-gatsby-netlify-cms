@@ -14,7 +14,7 @@ const StyledParagraph = styled.p`
   font-family: ${fontFamily};
   line-height: 1.6;
   color: ${fontColor};
-  margin: 0;
+  margin: 1rem 0;
 
   ${media.greaterThan(tablet)`
     font-size: 1.6rem;

@@ -11,8 +11,11 @@ import Heading from '../components/atoms/Heading/Heading'
 import Subtitle from '../components/atoms/Subtitle/Subtitle'
 import TextLabel from '../components/atoms/TextLabel/TextLabel'
 
+const primaryColor = ({ theme }) => theme.colors.primary[0]
+
 const StyledTextLabel = styled(TextLabel)`
   display: block;
+  color: ${primaryColor};
 `
 
 export const BlogPostTemplate = ({

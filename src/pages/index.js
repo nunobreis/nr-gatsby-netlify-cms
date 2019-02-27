@@ -34,9 +34,10 @@ export default class IndexPage extends React.Component {
           <StyledHeading level={1}>Hello World</StyledHeading>
           <Subtitle>I am UX developer</Subtitle>
           <Paragraph>
-            Leverage agile frameworks to provide a robust synopsis for high
-            level overviews. Iterative approaches to corporate strategy foster
-            collaborative thinking to further the overall.
+            I am an experienced designer with a demonstrated history digital
+            industry. I have worked as UI/UX Designer and a Frontend Developer.
+            Recently I have been focusing on interaction design and programming
+            mobile apps and desktop apps with React / Redux and React Native.
           </Paragraph>
         </Wrapper>
       </HomeLayout>

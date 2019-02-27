@@ -24,6 +24,14 @@ const StyledLink = styled(Link)`
   & > p {color: ${colorPrimary};}
 `
 
+const StyledLabel = styled.label`
+  font-size: 1.2rem;
+  margin: 1rem;
+  cursor: pointer;
+`
+
+const Block = styled.div`margin: 2rem 0;`
+
 const ContactSection = () => (
   <Wrapper>
     <Heading>Want to reach me?</Heading>
@@ -32,35 +40,39 @@ const ContactSection = () => (
       shy I will reply :)
     </Paragraph>
 
-    <StyledLink href="https://www.instagram.com/nunobreis/" target="blank">
-      <Instagram />
-      <Paragraph>@nunobreis</Paragraph>
-    </StyledLink>
+    <Block>
+      <StyledLink href="https://www.instagram.com/nunobreis/" target="blank">
+        <Instagram />
+        <StyledLabel>@nunobreis</StyledLabel>
+      </StyledLink>
 
-    <StyledLink href="https://www.linkedin.com/in/nunobreis/" target="blank">
-      <LinkedIn />
-      <Paragraph>/in/nunobreis/</Paragraph>
-    </StyledLink>
+      <StyledLink href="https://www.linkedin.com/in/nunobreis/" target="blank">
+        <LinkedIn />
+        <StyledLabel>/in/nunobreis/</StyledLabel>
+      </StyledLink>
 
-    <StyledLink href="https://www.facebook.com/nunobelemreis" target="blank">
-      <Facebook />
-      <Paragraph>/nunobelemreis</Paragraph>
-    </StyledLink>
+      <StyledLink href="https://www.facebook.com/nunobelemreis" target="blank">
+        <Facebook />
+        <StyledLabel>/nunobelemreis</StyledLabel>
+      </StyledLink>
+    </Block>
 
-    <StyledLink href="https://twitter.com/nunobreis" target="blank">
-      <Twitter href="" />
-      <Paragraph>/nunobelemreis</Paragraph>
-    </StyledLink>
+    <Block>
+      <StyledLink href="https://twitter.com/nunobreis" target="blank">
+        <Twitter href="" />
+        <StyledLabel>/nunobelemreis</StyledLabel>
+      </StyledLink>
 
-    <StyledLink href="https://www.pinterest.pt/nunobreis/" target="blank">
-      <Pinterest />
-      <Paragraph>/nunobreis</Paragraph>
-    </StyledLink>
+      <StyledLink href="https://www.pinterest.pt/nunobreis/" target="blank">
+        <Pinterest />
+        <StyledLabel>/nunobreis</StyledLabel>
+      </StyledLink>
 
-    <StyledLink href="https://github.com/nunobreis" target="blank">
-      <GitHub />
-      <Paragraph>/nunobreis</Paragraph>
-    </StyledLink>
+      <StyledLink href="https://github.com/nunobreis" target="blank">
+        <GitHub />
+        <StyledLabel>/nunobreis</StyledLabel>
+      </StyledLink>
+    </Block>
   </Wrapper>
 )
 

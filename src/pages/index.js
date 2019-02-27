@@ -1,47 +1,46 @@
 import React from 'react'
+import media from 'styled-media-query'
+import styled from 'styled-components'
 import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
-import Layout from '../components/Layout'
+import { graphql } from 'gatsby'
+
+import { mobile } from '../components/mediaQueries/default'
+
+import HomeLayout from '../components/Layouts/HomeLayout/HomeLayout'
+import Heading from '../components/atoms/Heading/Heading'
+import Paragraph from '../components/atoms/Paragraph/Paragraph'
+import Subtitle from '../components/atoms/Subtitle/Subtitle'
+
+const Wrapper = styled.section`
+  padding: 0 4%;
+
+  ${media.greaterThan(mobile)`
+    padding: 0 6% 0 12%;
+    font-size: 1.8rem;
+    line-height: 1.7;    
+  `};
+`
+
+const StyledHeading = styled(Heading)`
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+`
 
 export default class IndexPage extends React.Component {
   render() {
-    const { data } = this.props
-    const { edges: posts } = data.allMarkdownRemark
-
     return (
-      <Layout>
-        <section className="section">
-          <div className="container">
-            <div className="content">
-              <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
-            </div>
-            {posts
-              .map(({ node: post }) => (
-                <div
-                  className="content"
-                  style={{ border: '1px solid #333', padding: '2em 4em' }}
-                  key={post.id}
-                >
-                  <p>
-                    <Link className="has-text-primary" to={post.fields.slug}>
-                      {post.frontmatter.title}
-                    </Link>
-                    <span> &bull; </span>
-                    <small>{post.frontmatter.date}</small>
-                  </p>
-                  <p>
-                    {post.excerpt}
-                    <br />
-                    <br />
-                    <Link className="button is-small" to={post.fields.slug}>
-                      Keep Reading →
-                    </Link>
-                  </p>
-                </div>
-              ))}
-          </div>
-        </section>
-      </Layout>
+      <HomeLayout>
+        <Wrapper>
+          <StyledHeading level={1}>Hello World</StyledHeading>
+          <Subtitle>I am UX developer</Subtitle>
+          <Paragraph>
+            I am an experienced designer with a demonstrated history digital
+            industry. I have worked as UI/UX Designer and a Frontend Developer.
+            Recently I have been focusing on interaction design and programming
+            mobile apps and desktop apps with React / Redux and React Native.
+          </Paragraph>
+        </Wrapper>
+      </HomeLayout>
     )
   }
 }
@@ -57,8 +56,8 @@ IndexPage.propTypes = {
 export const pageQuery = graphql`
   query IndexQuery {
     allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] },
-      filter: { frontmatter: { templateKey: { eq: "blog-post" } }}
+      sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
     ) {
       edges {
         node {

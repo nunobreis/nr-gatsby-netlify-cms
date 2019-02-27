@@ -1,13 +1,13 @@
 import React from 'react'
-import Layout from '../components/Layout'
+import PostListLayout from '../components/Layouts/MainLayout/MainLayout'
 
 const NotFoundPage = () => (
-  <Layout>
+  <PostListLayout>
     <div>
       <h1>NOT FOUND</h1>
       <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
     </div>
-  </Layout>
+  </PostListLayout>
 )
 
 export default NotFoundPage

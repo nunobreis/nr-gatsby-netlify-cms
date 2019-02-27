@@ -1,15 +1,30 @@
 import React from 'react'
+import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
-import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+
+import PostViewLayout from '../components/Layouts/PostViewLayout/PostViewLayout'
+import Heading from '../components/atoms/Heading/Heading'
+import Subtitle from '../components/atoms/Subtitle/Subtitle'
+import TextLabel from '../components/atoms/TextLabel/TextLabel'
+
+const primaryColor = ({ theme }) => theme.colors.primary[0]
+
+const StyledTextLabel = styled(TextLabel)`
+  display: block;
+  color: ${primaryColor};
+`
 
 export const BlogPostTemplate = ({
   content,
   contentComponent,
+  coverPhoto,
   description,
+  date,
+  author,
   tags,
   title,
   helmet,
@@ -17,32 +32,26 @@ export const BlogPostTemplate = ({
   const PostContent = contentComponent || Content
 
   return (
-    <section className="section">
+    <PostViewLayout coverPhoto={coverPhoto ? coverPhoto : null}>
       {helmet || ''}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
-            <p>{description}</p>
-            <PostContent content={content} />
-            {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
-                <ul className="taglist">
-                  {tags.map(tag => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : null}
-          </div>
+      {date ? <StyledTextLabel>{date}</StyledTextLabel> : null}
+      {author ? <StyledTextLabel>{author}</StyledTextLabel> : null}
+      <Heading level={1}>{title}</Heading>
+      <Subtitle>{description}</Subtitle>
+      <PostContent content={content} />
+      {tags && tags.length ? (
+        <div style={{ marginTop: `4rem` }}>
+          <h4>Tags</h4>
+          <ul className="taglist">
+            {tags.map(tag => (
+              <li key={tag + `tag`}>
+                <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+              </li>
+            ))}
+          </ul>
         </div>
-      </div>
-    </section>
+      ) : null}
+    </PostViewLayout>
   )
 }
 
@@ -58,23 +67,28 @@ const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
-    <Layout>
-      <BlogPostTemplate
-        content={post.html}
-        contentComponent={HTMLContent}
-        description={post.frontmatter.description}
-        helmet={
-          <Helmet
-            titleTemplate="%s | Blog"
-          >
-            <title>{`${post.frontmatter.title}`}</title>
-            <meta name="description" content={`${post.frontmatter.description}`} />
-          </Helmet>
-        }
-        tags={post.frontmatter.tags}
-        title={post.frontmatter.title}
-      />
-    </Layout>
+    <BlogPostTemplate
+      content={post.html}
+      contentComponent={HTMLContent}
+      author={post.frontmatter.author ? post.frontmatter.author : null}
+      date={post.frontmatter.date ? post.frontmatter.date : null}
+      description={post.frontmatter.description}
+      coverPhoto={
+        post.frontmatter.coverPhoto ? post.frontmatter.coverPhoto : null
+      }
+      helmet={
+        <Helmet titleTemplate="%s | Blog">
+          <title>{`${post.frontmatter.title}`}</title>
+          <meta
+            name="description"
+            content={`${post.frontmatter.description}`}
+          />
+          {console.log(post.frontmatter)}
+        </Helmet>
+      }
+      tags={post.frontmatter.tags}
+      title={post.frontmatter.title}
+    />
   )
 }
 
@@ -95,6 +109,8 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         description
+        author
+        coverPhoto
         tags
       }
     }

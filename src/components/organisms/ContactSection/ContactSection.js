@@ -42,7 +42,7 @@ const ContactSection = () => (
       <Paragraph>/in/nunobreis/</Paragraph>
     </StyledLink>
 
-    <StyledLink href="https://www.linkedin.com/in/nunobreis/" target="blank">
+    <StyledLink href="https://www.facebook.com/nunobelemreis" target="blank">
       <Facebook />
       <Paragraph>/nunobelemreis</Paragraph>
     </StyledLink>

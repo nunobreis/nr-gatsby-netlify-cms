@@ -5,8 +5,10 @@ import styled from 'styled-components'
 import { styles } from './Heading.styles'
 
 const Heading = styled(({ level, children, ...props }) =>
-  React.createElement(`h${level}`, props, children),
-)`${styles}`
+  React.createElement(`h${level}`, props, children)
+)`
+  ${styles}
+`
 
 Heading.propTypes = {
   level: PropTypes.number,

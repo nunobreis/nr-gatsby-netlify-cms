@@ -3,10 +3,14 @@ import { Link as GatsbyLink } from 'gatsby'
 
 const color = ({ theme }) => theme.colors.ascendant[0]
 
-const styles = css`color: ${color};`
+const styles = css`
+  color: ${color};
+`
 
 export const StyledGatsbyLink = styled(GatsbyLink)`
   ${styles};
 `
 
-export const StyledATag = styled.a`${styles};`
+export const StyledATag = styled.a`
+  ${styles};
+`

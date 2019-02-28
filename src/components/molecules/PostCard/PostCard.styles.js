@@ -57,7 +57,7 @@ export const PostTitle = styled(Link)`
 
 export const Sinopse = styled(Paragraph)`
   font-size: 1rem;
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 `
 
 export const KeepReading = styled(Link)`

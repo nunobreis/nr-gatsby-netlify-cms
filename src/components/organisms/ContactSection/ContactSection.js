@@ -20,8 +20,10 @@ const Wrapper = styled.section`
 `
 
 const StyledLink = styled(Link)`
-  margin: 4rem 0!important;
-  & > p {color: ${colorPrimary};}
+  margin: 4rem 0 !important;
+  & > p {
+    color: ${colorPrimary};
+  }
 `
 
 const StyledLabel = styled.label`
@@ -30,7 +32,9 @@ const StyledLabel = styled.label`
   cursor: pointer;
 `
 
-const Block = styled.div`margin: 2rem 0;`
+const Block = styled.div`
+  margin: 2rem 0;
+`
 
 const ContactSection = () => (
   <Wrapper>

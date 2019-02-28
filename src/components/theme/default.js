@@ -68,12 +68,12 @@ const fonts = {
 }
 
 const colors = {
-  primary: [ '#32b3a6' ],
-  secondary: [ '#17213e' ],
-  ascendant: [ '#ae3e2e' ],
-  textColor: [ '#17213e' ],
-  white: [ '#fff' ],
-  bodyColor: [ '#fcecd7' ],
+  primary: ['#32b3a6'],
+  secondary: ['#17213e'],
+  ascendant: ['#ae3e2e'],
+  textColor: ['#17213e'],
+  white: ['#fff'],
+  bodyColor: ['#fcecd7'],
   grayscale: [
     '#171717',
     '#2e2e2e',
@@ -86,7 +86,7 @@ const colors = {
     '#d0d0d0',
     '#e7e7e7',
   ],
-  transparent: [ 'rgba(0, 0, 0, 0)' ],
+  transparent: ['rgba(0, 0, 0, 0)'],
 }
 
 const theme = {

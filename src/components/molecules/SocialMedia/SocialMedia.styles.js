@@ -29,7 +29,7 @@ export const Wrapper = styled.div`
 `
 
 export const StyledLink = styled(Link)`
-  padding: .5rem;
+  padding: 0.5rem;
   color: ${color};
   margin: auto;
 

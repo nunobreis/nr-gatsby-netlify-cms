@@ -20,4 +20,6 @@ const styles = css`
     `}
 `
 
-export const StyledHeading = styled.h6`${styles};`
+export const StyledHeading = styled.h6`
+  ${styles};
+`

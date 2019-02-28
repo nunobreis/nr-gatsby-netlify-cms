@@ -20,9 +20,9 @@ const styles = css`
   outline: none;
   background-color: ${backgroundColor};
   border: none;
-  padding: .8rem 1.7rem;
+  padding: 0.8rem 1.7rem;
   font-size: 1.2rem;
-  border-radius: .4rem;
+  border-radius: 0.4rem;
   width: 100%;
 
   &:hover {
@@ -38,4 +38,6 @@ const styles = css`
     font-size: 1.4rem;
   `};
 `
-export const StyledButton = styled.button`${styles};`
+export const StyledButton = styled.button`
+  ${styles};
+`

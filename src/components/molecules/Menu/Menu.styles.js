@@ -25,9 +25,9 @@ export const Wrapper = styled.div`
   z-index: 2000;
   top: 0;
   background-color: ${backgroundColor};
-  opacity: .9;
+  opacity: 0.9;
   padding: 2rem;
-  animation: ${fadeIn} .35s;
+  animation: ${fadeIn} 0.35s;
   transition: opacity 0, 2s;
 `
 
@@ -39,8 +39,8 @@ export const StyledLink = styled(Link)`
   text-align: center;
   text-decoration: none;
 
-  &:hover{
-      text-decoration: line-through;
+  &:hover {
+    text-decoration: line-through;
   }
 
   ${media.greaterThan(mobile)`
@@ -58,7 +58,7 @@ export const CloseButton = styled(Link)`
 
   &:hover {
     background-color: ${color};
-    transform: scale(.95);
+    transform: scale(0.95);
     color: ${backgroundColor};
     transform: scale(1.05);
   }

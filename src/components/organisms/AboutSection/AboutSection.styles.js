@@ -23,11 +23,11 @@ export const Wrapper = styled.section`
 `
 
 export const Quote = styled(Subtitle)`
-    font-weight: 400;
-    text-transform: capitalize;
-    color: ${ascendantColor};
+  font-weight: 400;
+  text-transform: capitalize;
+  color: ${ascendantColor};
 
-    ${media.greaterThan(mobile)`
+  ${media.greaterThan(mobile)`
       font-size: 2.8rem!important;
       line-height: 1.2;
     `}
@@ -35,7 +35,7 @@ export const Quote = styled(Subtitle)`
 
 export const QuoteAuthor = styled.label`
   display: block;
-  font-size: .8rem;
+  font-size: 0.8rem;
   line-height: 3;
   font-weight: 800;
   text-transform: uppercase;

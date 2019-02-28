@@ -3,6 +3,7 @@ import media from 'styled-media-query'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
+import Typed from 'typed.js'
 
 import { mobile } from '../components/mediaQueries/default'
 
@@ -27,12 +28,34 @@ const StyledHeading = styled(Heading)`
 `
 
 export default class IndexPage extends React.Component {
+  componentDidMount() {
+    const options = {
+      strings: [
+        'Frontend Developer',
+        'UI/UX Designer',
+        'Digital Product Designer',
+        'UX Developer',
+      ],
+      typeSpeed: 50,
+      backSpeed: 30,
+      loop: true,
+    }
+
+    this.typed = new Typed(this.el, options)
+  }
+
+  componentWillUnmount() {
+    this.typed.destroy()
+  }
+
   render() {
     return (
       <HomeLayout>
         <Wrapper>
           <StyledHeading level={1}>Hello World</StyledHeading>
-          <Subtitle>I am UX developer</Subtitle>
+          <Subtitle>
+            I am a <span ref={el => (this.el = el)} />
+          </Subtitle>
           <Paragraph>
             I am an experienced designer with a demonstrated history digital
             industry. I have worked as UI/UX Designer and a Frontend Developer.

@@ -32,13 +32,11 @@ const StyledLabel = styled.label`
   cursor: pointer;
 `
 
-const Block = styled.div`
-  margin: 2rem 0;
-`
+const Block = styled.div`margin: 2rem 0;`
 
 const ContactSection = () => (
   <Wrapper>
-    <Heading>Want to reach me?</Heading>
+    <Heading level={3}>Want to reach me?</Heading>
     <Paragraph>
       Choose one of my personal social networks and drop me a message. Don't be
       shy I will reply :)
@@ -49,12 +47,16 @@ const ContactSection = () => (
         <Instagram />
         <StyledLabel>@nunobreis</StyledLabel>
       </StyledLink>
+    </Block>
 
+    <Block>
       <StyledLink href="https://www.linkedin.com/in/nunobreis/" target="blank">
         <LinkedIn />
         <StyledLabel>/in/nunobreis/</StyledLabel>
       </StyledLink>
+    </Block>
 
+    <Block>
       <StyledLink href="https://www.facebook.com/nunobelemreis" target="blank">
         <Facebook />
         <StyledLabel>/nunobelemreis</StyledLabel>
@@ -66,12 +68,16 @@ const ContactSection = () => (
         <Twitter href="" />
         <StyledLabel>/nunobelemreis</StyledLabel>
       </StyledLink>
+    </Block>
 
+    <Block>
       <StyledLink href="https://www.pinterest.pt/nunobreis/" target="blank">
         <Pinterest />
         <StyledLabel>/nunobreis</StyledLabel>
       </StyledLink>
+    </Block>
 
+    <Block>
       <StyledLink href="https://github.com/nunobreis" target="blank">
         <GitHub />
         <StyledLabel>/nunobreis</StyledLabel>

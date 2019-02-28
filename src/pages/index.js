@@ -33,7 +33,7 @@ export default class IndexPage extends React.Component {
       strings: [
         'Frontend Developer',
         'UI/UX Designer',
-        'Digital Product Designer',
+        'Product Designer',
         'UX Developer',
       ],
       typeSpeed: 50,

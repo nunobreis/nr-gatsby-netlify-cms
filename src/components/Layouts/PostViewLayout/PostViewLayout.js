@@ -19,15 +19,25 @@ const PostContent = styled.section`
 `
 
 const CoverPhoto = styled.div`
-  height: 20rem;
+  height: 15rem;
   width: 100%;
+
+  ${media.greaterThan(mobile)`
+    height: 20rem;
+  `};
+
+  ${media.greaterThan(tablet)`
+    height: 25rem;
+  `};
 `
 
 const PostViewLayout = ({ children, coverPhoto, ...props }) => (
   <MainLayout {...props}>
     {coverPhoto ? (
       <CoverPhoto
-        style={{ background: `url(/img/${coverPhoto}) center center` }}
+        style={{
+          background: `url(/img/${coverPhoto}) center center / cover fixed`,
+        }}
       />
     ) : null}
     <PostContent>{children}</PostContent>

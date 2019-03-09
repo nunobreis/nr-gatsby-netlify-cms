@@ -7,6 +7,7 @@ description: >-
   Conference happened. Organised by the Awwwards, the most visited digital
   design awards platform in the world. I had the opportunity of being there and
   this is my verdict.
+coverPhoto: amsterdam_cover.jpg
 tags:
   - conference
   - awwwards

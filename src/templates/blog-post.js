@@ -83,7 +83,6 @@ const BlogPost = ({ data }) => {
             name="description"
             content={`${post.frontmatter.description}`}
           />
-          {console.log(post.frontmatter)}
         </Helmet>
       }
       tags={post.frontmatter.tags}

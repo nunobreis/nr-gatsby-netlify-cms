@@ -6,6 +6,7 @@ description: >-
   In this post you can find techniques for developing a meaningful name to
   represent your brand or product. The posts suggests a collaborative process
   but it can also be performed by one single individual.
+coverPhoto: design_thinking_cover.jpg
 tags:
   - naming
   - design thinking
